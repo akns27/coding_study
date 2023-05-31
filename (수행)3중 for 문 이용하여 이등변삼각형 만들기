@@ -1,1 +1,34 @@
+#include <stdio.h>
 
+int main() {
+    int n = 5;
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n-i; j++) {
+            printf(" ");
+        }
+        for (int j = 1; j <= 2*i-1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+//아래 코드는 입력받은 수만큼 줄 수를 만든다(ex. 5입력 > 5줄)
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n-i; j++) {
+            printf(" ");
+        }
+        for (int j = 1; j <= 2*i-1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
