@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+ int hour, min;
+  printf("시간과 분을 입력하세요 :");
+  scanf("%d %d", &hour, &min);
+  printf("입력한 시간의 30분전 시간은");
+  if(min>=30)
+    printf("%d시 %d분\n", hour, min-30);//분이 30보다 크면 그냥 30빼줌
+  else//작을경우
+  {
+    if(hour==0)//시간이 0시(12시)일 경우는 23시(11시)로 바꿔 출력하고 분에 30더함 (예시, 입력:0 10, 출력:23 40)
+      printf("%d시 %d분\n", 23, min+30);
+    else
+      printf("%d시 %d분\n", hour-1, min+30);//0시가 아닐 경우 그냥 1시간 빼고 30분 더하기
+  }
+}
