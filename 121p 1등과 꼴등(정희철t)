@@ -14,5 +14,4 @@ main() {
       if(num<min)
         min=num;
     }
-  printf("1등은 %d점, 꼴찌는 %d점\n", max, min);
-}
+  
